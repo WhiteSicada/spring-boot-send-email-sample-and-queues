@@ -1,0 +1,30 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: whitesicada@gmail.com
+    password: stkwyqvwvcuzhybt
+    from: whitesicada@gmail.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+rabbitmq:
+  exchange:
+    name: javaguides_exchange
+  queue:
+    json:
+      name: javaguides_json
+    name: javaguides
+  routing:
+    json:
+      key: javaguides_routing_json_key
+    key: javaguides_routing_key
